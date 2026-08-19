@@ -1,0 +1,3 @@
+location    = "francecentral"
+environment = "dev"
+project     = "transit"
