@@ -1,10 +1,14 @@
 name: Terraform Validate
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '**.tf'
   pull_request:
     paths:
       - '**.tf'
-      - '**.tfvars'
+  workflow_dispatch:
 
 jobs:
   validate:
