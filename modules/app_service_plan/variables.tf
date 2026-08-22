@@ -1,25 +1,31 @@
 variable "name" {
-  type = string
+  description = "Name of the App Service Plan"
+  type        = string
 }
 
 variable "resource_group_name" {
-  type = string
+  description = "Name of the resource group to deploy into"
+  type        = string
 }
 
 variable "location" {
-  type = string
+  description = "Azure region for deployment"
+  type        = string
 }
 
 variable "os_type" {
-  type    = string
-  default = "Linux"
+  description = "Operating system for the plan (Linux or Windows)"
+  type        = string
+  default     = "Linux"
 }
 
 variable "sku_name" {
-  type = string
+  description = "SKU tier and size (e.g. F1 for free, B1 for basic)"
+  type        = string
 }
 
 variable "tags" {
-  type    = map(string)
-  default = {}
+  description = "Tags to apply to all resources"
+  type        = map(string)
+  default     = {}
 }

@@ -1,56 +1,68 @@
 variable "name" {
-  type = string
+  description = "Name of the Web App"
+  type        = string
 }
 
 variable "resource_group_name" {
-  type = string
+  description = "Name of the resource group to deploy into"
+  type        = string
 }
 
 variable "location" {
-  type = string
+  description = "Azure region for deployment"
+  type        = string
 }
 
 variable "service_plan_id" {
-  type = string
+  description = "ID of the App Service Plan to attach to"
+  type        = string
 }
 
 variable "docker_image_name" {
-  type    = string
-  default = ""
+  description = "Docker image to deploy (e.g. owner/image:tag)"
+  type        = string
+  default     = ""
 }
 
 variable "docker_registry_url" {
-  type    = string
-  default = ""
+  description = "Docker registry URL (e.g. https://ghcr.io)"
+  type        = string
+  default     = ""
 }
 
 variable "docker_registry_username" {
-  type    = string
-  default = ""
+  description = "Docker registry username (leave empty for public repos)"
+  type        = string
+  default     = ""
 }
 
 variable "docker_registry_password" {
-  type      = string
-  default   = ""
-  sensitive = true
+  description = "Docker registry password or PAT (leave empty for public repos)"
+  type        = string
+  default     = ""
+  sensitive   = true
 }
 
 variable "app_settings" {
-  type    = map(string)
-  default = {}
+  description = "Additional app settings as key-value pairs"
+  type        = map(string)
+  default     = {}
 }
 
 variable "https_only" {
-  type    = bool
-  default = true
+  description = "Restrict traffic to HTTPS only"
+  type        = bool
+  default     = true
 }
 
 variable "always_on" {
-  type    = bool
-  default = false
+  description = "Keep the app loaded when idle. Ignored on F1 (free) tier — always false there regardless of this setting."
+  type        = bool
+  default     = false
 }
 
 variable "tags" {
-  type    = map(string)
-  default = {}
+  description = "Tags to apply to all resources"
+  type        = map(string)
+  default     = {}
 }

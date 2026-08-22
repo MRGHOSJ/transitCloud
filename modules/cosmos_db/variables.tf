@@ -1,20 +1,25 @@
 variable "name" {
-  type = string
+  description = "Name of the Cosmos DB account"
+  type        = string
 }
 
 variable "resource_group_name" {
-  type = string
+  description = "Name of the resource group to deploy into"
+  type        = string
 }
 
 variable "location" {
-  type = string
+  description = "Azure region for deployment"
+  type        = string
 }
 
 variable "database_name" {
-  type = string
+  description = "Name of the MongoDB database to create"
+  type        = string
 }
 
 variable "tags" {
-  type    = map(string)
-  default = {}
+  description = "Tags to apply to all resources"
+  type        = map(string)
+  default     = {}
 }
