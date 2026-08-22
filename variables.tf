@@ -21,3 +21,16 @@ variable "ghcr_owner" {
   type        = string
   default     = "MRGHOSJ"
 }
+
+variable "docker_registry_username" {
+  description = "Docker registry username (leave empty for public repos)"
+  type        = string
+  default     = ""
+}
+
+variable "docker_registry_password" {
+  description = "Docker registry password or PAT (leave empty for public repos)"
+  type        = string
+  default     = ""
+  sensitive   = true
+}

@@ -45,8 +45,8 @@ module "backend" {
 
   docker_image_name        = "${var.ghcr_owner}/transit-backend:latest"
   docker_registry_url      = "https://ghcr.io"
-  docker_registry_username = ""
-  docker_registry_password = ""
+  docker_registry_username = var.docker_registry_username
+  docker_registry_password = var.docker_registry_password
 
   app_settings = {
     PORT = "8081"
@@ -71,8 +71,8 @@ module "frontend" {
 
   docker_image_name        = "${var.ghcr_owner}/transit-frontend:latest"
   docker_registry_url      = "https://ghcr.io"
-  docker_registry_username = ""
-  docker_registry_password = ""
+  docker_registry_username = var.docker_registry_username
+  docker_registry_password = var.docker_registry_password
 
   app_settings = {
     PORT                     = "3000"

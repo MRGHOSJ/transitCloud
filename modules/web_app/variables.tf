@@ -15,11 +15,13 @@ variable "service_plan_id" {
 }
 
 variable "docker_image_name" {
-  type = string
+  type    = string
+  default = ""
 }
 
 variable "docker_registry_url" {
-  type = string
+  type    = string
+  default = ""
 }
 
 variable "docker_registry_username" {

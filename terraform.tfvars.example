@@ -1,3 +1,6 @@
 location    = "francecentral"
 environment = "dev"
-project     = "transit"
+project     = "projectname"
+ghcr_owner  = "username"
+docker_registry_username = ""
+docker_registry_password = ""
