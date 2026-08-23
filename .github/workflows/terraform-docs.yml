@@ -29,7 +29,7 @@ jobs:
           mkdir -p docs/modules
           for dir in modules/*/; do
             name=$(basename "$dir")
-            terraform-docs markdown table --output-file "docs/modules/${name}.md" "$dir"
+            terraform-docs markdown table --output-file "$(pwd)/docs/modules/${name}.md" "$dir"
           done
 
       - name: Commit if changed
